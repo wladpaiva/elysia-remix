@@ -1,14 +1,24 @@
 {
-  "name": "elysia-remix",
-  "version": "1.0.50",
+  "name": "elysia-remix-test",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "remix build"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@remix-run/node": "^2.0.1",
+    "@remix-run/react": "^2.0.1",
+    "@remix-run/serve": "^2.0.1",
+    "elysia": "latest",
+    "isbot": "^3.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@remix-run/dev": "^2.0.1",
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
     "bun-types": "latest"
   },
   "module": "src/index.js"
