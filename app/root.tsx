@@ -9,7 +9,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        wqewqeq
         <Outlet />
 
         <Scripts />
