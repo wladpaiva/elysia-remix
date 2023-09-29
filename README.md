@@ -1,15 +1,5 @@
-# Elysia with Bun runtime
+# Attempt to make Elysia run with Bun and mount Remix in a subpath
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+It seems to be working fine although we need to change the `react-dom/server` import on the **entry.server.tsx** to `react-dom/server.node`
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
-
-Open http://localhost:3000/ with your browser to see the result.
+AND be prepare to fight against the [broken links](https://github.com/remix-run/remix/discussions/2891)
