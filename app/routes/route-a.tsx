@@ -6,10 +6,10 @@ export default function RouteA() {
       <h1>Route A</h1>
       <ul>
         <li>
-          <Link to="/remix">index</Link>
+          <Link to="/">index</Link>
         </li>
         <li>
-          <Link to="/remix/route-b">Route B</Link>
+          <Link to="/route-b">Route B</Link>
         </li>
       </ul>
     </div>

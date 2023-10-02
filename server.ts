@@ -1,13 +1,17 @@
 import { createRequestHandler } from "./remix-elysia";
 import { Elysia } from "elysia";
+import { staticPlugin } from "@elysiajs/static";
 
 // notice that the result of `remix build` is "just a module"
 import * as build from "./build/index.js";
 
 const app = new Elysia()
-  .get("/", () => "Hello Elysia \n\nGo to /remix to see the remix")
+  .get("/api", () => "Hello Elysia")
+  // Serve public files
+  .use(staticPlugin({ prefix: "/" }))
+  // Serve remix routes
   .mount(
-    "/remix",
+    "/",
     createRequestHandler({
       // @ts-expect-error
       build,
